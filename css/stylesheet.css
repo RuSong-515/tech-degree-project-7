@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1em;
+
+}
+
+/* ----------------- Header ----------------- */
+header {
+  background: #7e79ba;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  color: white;
+}
+
+h1 {
+  margin: auto 15px;
+}
+
+span{
+  font-weight: 200;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  width: 35%;;
+}
+
+hr {
+  width: 1px;
+  height: 40px;
+  border: none;
+  background-color: #653dc4;
+}
+
+.bell {
+  height: 40%;
+  margin-right: 0.8rem;
+}
+
+.bell:hover {
+  transform: rotate(20deg);
+}
+
+.user-image {
+  height: 50%;
+  border-radius: 50%;
+  margin-left: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+
+/* ----------------- Navbar ----------------- */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  background: #605380;
+  height: 80px;
+  width: 100%;
+}
+
+.navbar a {
+  text-align: center;
+  width: 10%;
+  margin: auto 1rem;
+}
+
+.navbar img {
+  width: 50%;
+}
+
+.navbar a:hover {
+  border-bottom: solid 5px rgb(165, 221, 52);
+  border-radius: 5px;
+}
+
+
+/* ----------------- Main  header----------------- */
+.main-container {
+  width: 100%;
+}
+
+h2 {
+  margin: 1rem 1rem 1rem 0;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+.main-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+  width: 100%;
+}
+
+.search {
+  background: rgb(250, 247, 247);
+  border-bottom-left-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid rgb(235, 232, 232);
+  position: relative;
+}
+
+.search .fa-search {
+  position: absolute;
+  right: 30px;
+  color: gray;
+}
+
+input {
+  font-size: 1rem;
+  padding: 6px 6px 6px 6px;
+  border: 1px solid rgb(223, 220, 220);
+  border-radius: 5px;
+  width: 50%;
+  margin-right: 1rem;
+  
+}
+
+.traffic,
+.daily,
+.mobile,
+.social, 
+.members-section,
+.activity-section,
+.message,
+.settings {
+  width: 90%;
+  margin: 1rem auto;
+}
+/* ----------------- Main  traffic----------------- */
+
+.traffic-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem auto;
+}
+
+.traffic-list {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  font-weight: 700;
+  line-height: 1rem;
+}
+
+.traffic-list li {
+  margin-left: 1rem;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+
+.active {
+  background: rgb(138, 211, 150);
+  color: #fff;
+}
+
+/* ----------------- Daily traffic----------------- */
+/* ----------------- Mobile user----------------- */
+/* ----------------- Social states----------------- */
+.social-container{
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 1.5rem;
+  width: 55%;
+  margin: 3rem auto;
+
+}
+
+.social-image {
+  display: grid;
+  grid-column: 20% 60%;
+  grid-template-areas: 'image text';
+  margin: 0.6rem 1rem;
+  padding: 0.8rem 2rem;
+  background: rgb(250, 247, 247); 
+  border: 1px solid rgb(235, 232, 232);
+  border-radius: 5px;
+}
+
+.svg-image {
+  grid-area: image;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  background: #8e78c0;
+  border-radius: 50%;
+}
+
+ .social-text {
+  grid-area: text;
+}
+
+.social-text p:first-child {
+  font-weight: 700;
+  color: #8e78c0;
+  font-size: .9rem;
+  margin: 0.8rem auto;
+}
+
+.social-text p:last-child {
+  font-size: 2rem;
+  margin: 0.5rem auto;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
+}
+
+.svg-image path {
+  fill: #fff;
+}
+
+/* ----------------- New members and Activity----------------- */
+
+.members-section,
+.activity-section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 1.5rem;
+}
+
+.members-container,
+.activity-container {
+  display: grid;
+  grid-row-gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.members,
+.activity {
+  display: grid;
+  grid-template-columns:1fr 8fr 1fr;
+  height: 4rem;
+  position: relative;
+  grid-column-gap: 0.5rem;
+}
+
+.user-image {
+  margin: 0;
+  height: 100%;
+}
+
+.members-text a {
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+
+.activity-text p:last-child {
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.activity-text p:first-child,
+.members-text p:first-child {
+  margin: 0.75rem 0;
+}
+
+.activity > p {
+  color: #8e78c0;
+}
+
+.members::after,
+.activity::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 0.7px solid rgb(235, 232, 232);
+  top: 75px;
+  left: 0;
+  right: 0;
+}
+
+/* ----------------- Message and Settings----------------- */
+.message,
+.settings {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1.5rem;
+}
+
+.message-container,
+.settings-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 1.5rem;
+}
+
+.form-field {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgb(235, 232, 232);
+  padding: 0.5rem;
+}
+
+#messageField {
+  height: 7rem;
+}
+
+.switch-light {
+  display: grid;
+  grid-template-columns: 50% 20%;
+}
+
+.swutch-light > span {
+  color: #8e78c2
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+}
+
+button {
+  color: white;
+  background: #8e78c2;
+  height: 3rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#cancel {
+  background: lightgray;
+}
+
+/* ----------------- Media query ----------------- */
+@media (min-width:768px) {
+  .header-nav {
+    width: 20%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    background: #605380;
+    width: 100%;
+    height: 100%;
+  }
+  .navbar a {
+    width: 50%;
+    margin: 1.5rem auto;
+  }
+
+  .navbar img {
+    width: 80%;
+  }
+   
+  .main-header {
+    grid-template-columns: 1fr 5fr;
+  }
+  
+  input {
+    width: 40%;
+  }
+
+  .social-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .social-image {
+    padding: 0.8rem 2.5rem 0.8rem 0.8rem;
+  }
+
+  .members-container,
+  .activity-container  {
+    margin: 0 2rem;
+  }
+
+
+}

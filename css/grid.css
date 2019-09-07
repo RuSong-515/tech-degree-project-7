@@ -1,0 +1,96 @@
+
+.placeholder-image {
+  max-width:100%;
+  max-height:100%;
+}
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    'header'
+    'navbar'
+    'main';
+}
+
+header {
+  grid-area: header;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+main {
+  grid-area: main;
+}
+
+.traffic-chart,
+.daily-traffic-chart,
+.mobile-user-chart {
+  width: 95vw;;
+}
+
+ /* -----  Media query -----*/
+ @media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 80px 1fr;
+    grid-template-areas: 
+      'header header'
+      'navbar main';
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+      'main-header main-header'
+      'alert alert'
+      'traffics traffics'
+      'daily mobile'
+      'social social'
+      'members activity'
+      'message settings';
+  }
+
+  .main-header {
+    grid-area: main-header;
+  }
+  .alert {
+    grid-area: alert;
+  }
+  .traffic {
+    grid-area: traffics;
+  }
+  .daily {
+    grid-area: daily;
+  }
+  .mobile {
+    grid-area: mobile;
+  }
+  .social {
+    grid-area: social;
+  }
+  .members-section {
+    grid-area: members;
+  }
+  .activity-sections {
+    grid-area: activity;
+  }
+  .message {
+    grid-area: message;
+  }
+  .settings {
+    grid-area: settings;
+  }
+
+  .traffic-chart {
+    width: 90vw;
+  }
+  .daily-traffic-chart,
+  .mobile-user-chart {
+    width: 45vh;
+  }
+
+ }
