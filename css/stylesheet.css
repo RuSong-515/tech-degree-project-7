@@ -262,6 +262,7 @@ input {
 .activity-text p:first-child,
 .members-text p:first-child {
   margin: 0.75rem 0;
+  font-size: 1.5vw;
 }
 
 .activity > p {
@@ -311,7 +312,7 @@ input {
 }
 
 .swutch-light > span {
-  color: #8e78c2
+  color: #8e78c2,
 }
 
 .buttons-container {
@@ -379,4 +380,10 @@ button {
   }
 
 
+}
+
+@media (min-width:1024px) {
+  .grid-container {
+    max-width: 996px;
+  }
 }
