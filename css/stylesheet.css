@@ -39,13 +39,26 @@ hr {
   margin: auto 0.5rem;
 }
 
-.bell {
-  height: 30%;
 
+.bell {
+  width: 30px;
 }
 
 .bell:hover {
   transform: rotate(20deg);
+}
+
+.bell-container {
+  position: relative;
+}
+
+.bell-marker {
+  position: absolute;
+  top: -1px;
+  right:2px;
+  padding: 4px 4px;
+  border-radius: 50%;
+  background: rgb(165, 221, 52);
 }
 
 .user-image {
@@ -70,9 +83,6 @@ hr {
   padding: 2px 0;
 }
 
-/* .alert p {
-  display: inline-block;
-} */
 .alert-banner {
   padding: 0 1rem;
   display: flex;

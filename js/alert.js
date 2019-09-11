@@ -10,7 +10,7 @@ alert.innerHTML =
 
 alert.addEventListener('click', e => {
   const element = e.target;
-  if (element.classList.contains("alert-banner-colse")) {
+  if (element.classList.contains("alert-banner-close")) {
     alert.style.display = "none";
   }
 });
