@@ -27,7 +27,8 @@ span{
   display: flex;
   align-items: center;
   margin-right: 10px;
-  width: 35%;;
+  width: 30%;
+  font-size: 1.5vw;
 }
 
 hr {
@@ -35,11 +36,12 @@ hr {
   height: 40px;
   border: none;
   background-color: #653dc4;
+  margin: auto 0.5rem;
 }
 
 .bell {
-  height: 40%;
-  margin-right: 0.8rem;
+  height: 30%;
+
 }
 
 .bell:hover {
@@ -49,8 +51,23 @@ hr {
 .user-image {
   height: 50%;
   border-radius: 50%;
-  margin-left: 0.8rem;
   margin-right: 0.5rem;
+}
+
+#profile-image {
+  width: auto;
+  height: 50%;
+  margin-right: 0.5rem;
+}
+
+.alert {
+  text-align: center;
+  background: #7e79ba;
+  width: 60%;
+  margin: 0.5rem auto;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2px 0;
 }
 
 
@@ -62,21 +79,24 @@ hr {
   justify-content: space-around;
   background: #605380;
   height: 80px;
-  width: 100%;
 }
 
 .navbar a {
   text-align: center;
-  width: 10%;
+  width: 100%;
   margin: auto 1rem;
+  padding: 18px;
 }
 
 .navbar img {
-  width: 50%;
+  width: 32px;
 }
 
 .navbar a:hover {
-  border-bottom: solid 5px rgb(165, 221, 52);
+  border-top: solid 4px #605380;
+  border-right: solid 4px #605380;
+  border-left: solid 4px #605380;
+  border-bottom: solid 4px rgb(165, 221, 52);
   border-radius: 5px;
 }
 
@@ -134,9 +154,10 @@ input {
 .activity-section,
 .message,
 .settings {
-  width: 90%;
-  margin: 1rem auto;
+  width: 100%;
+  padding: 2rem;
 }
+
 /* ----------------- Main  traffic----------------- */
 
 .traffic-header {
@@ -165,7 +186,18 @@ input {
   color: #fff;
 }
 
+.traffic-chart {
+  width: 90%;
+  margin: 0 auto;
+}
 /* ----------------- Daily traffic----------------- */
+.daily-traffic-chart,
+.mobile-user-chart {
+  margin: 1rem auto;
+  height: 50%;
+  width: 45vw;
+}
+
 /* ----------------- Mobile user----------------- */
 /* ----------------- Social states----------------- */
 .social-container{
@@ -224,14 +256,14 @@ input {
 .members-section,
 .activity-section {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   grid-row-gap: 1.5rem;
 }
 
 .members-container,
 .activity-container {
   display: grid;
-  grid-row-gap: 1.5rem;
+  grid-row-gap: .2rem;
   grid-template-columns: 1fr;
 }
 
@@ -239,14 +271,16 @@ input {
 .activity {
   display: grid;
   grid-template-columns:1fr 8fr 1fr;
-  height: 4rem;
   position: relative;
   grid-column-gap: 0.5rem;
+  padding-bottom: 5px;
+  border-bottom: solid 1px lightgray;
 }
 
 .user-image {
-  margin: 0;
-  height: 100%;
+  display: block;
+  margin: auto;
+  height: 75%;
 }
 
 .members-text a {
@@ -255,29 +289,24 @@ input {
 }
 
 .activity-text p:last-child {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   margin: 0;
 }
 
 .activity-text p:first-child,
-.members-text p:first-child {
+.members-text p:first-child{
   margin: 0.75rem 0;
-  font-size: 1.5vw;
+  font-size: 0.7rem;
+}
+
+.members p:last-child {
+  font-size: 0.7rem;
+  text-align: end;
 }
 
 .activity > p {
   color: #8e78c0;
-}
-
-.members::after,
-.activity::after {
-  content: '';
-  display: block;
-  position: absolute;
-  border: 0.7px solid rgb(235, 232, 232);
-  top: 75px;
-  left: 0;
-  right: 0;
+  text-align: end;
 }
 
 /* ----------------- Message and Settings----------------- */
@@ -336,8 +365,13 @@ button {
 
 /* ----------------- Media query ----------------- */
 @media (min-width:768px) {
+  .main-header {
+    width: 100%;
+    grid-template-columns: 1fr 5fr;
+  }
+
   .header-nav {
-    width: 20%;
+    width: 25%;
   }
 
   .navbar {
@@ -349,21 +383,29 @@ button {
     height: 100%;
   }
   .navbar a {
-    width: 50%;
+    height: 80px;
     margin: 1.5rem auto;
   }
 
-  .navbar img {
-    width: 80%;
+  .navbar a:hover {
+    border-top: solid 4px #605380;
+    border-right: solid 4px #605380;
+    border-bottom: solid 4px #605380;
+    border-left: solid 4px rgb(165, 221, 52);
+    border-radius: 5px;
   }
    
-  .main-header {
-    grid-template-columns: 1fr 5fr;
-  }
   
   input {
     width: 40%;
   }
+
+  .daily-traffic-chart,
+  .mobile-user-chart {
+  margin: 1rem auto;
+  height: 80%;
+  width: 80%;
+}
 
   .social-container {
     grid-template-columns: repeat(3, 1fr);
@@ -374,16 +416,49 @@ button {
     padding: 0.8rem 2.5rem 0.8rem 0.8rem;
   }
 
-  .members-container,
-  .activity-container  {
-    margin: 0 2rem;
+  .daily, 
+  .members-section,
+  .message {
+  border-top: solid 1px lightgray;
+  border-right:solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
   }
 
+  .mobile,
+  .activity-section,
+  .settings {
+  border-top: solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
+  }
 
 }
 
 @media (min-width:1024px) {
-  .grid-container {
-    max-width: 996px;
+
+  .alert {
+    max-width: 1000px;
   }
+  .traffic {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  .daily,
+  .members-section,
+  .message {
+   max-width: 438px;
+   margin-left: auto;
+ 
+  }
+  .mobile,
+  .activity-section,
+  .settings {
+    max-width: 438px;
+     margin-right: auto; 
+  }
+
+  .social {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  
 }

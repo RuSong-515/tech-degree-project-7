@@ -1,8 +1,4 @@
 
-.placeholder-image {
-  max-width:100%;
-  max-height:100%;
-}
 .grid-container {
   display: grid;
   width: 100%;
@@ -75,7 +71,7 @@ main {
   .members-section {
     grid-area: members;
   }
-  .activity-sections {
+  .activity-section {
     grid-area: activity;
   }
   .message {
@@ -85,12 +81,5 @@ main {
     grid-area: settings;
   }
 
-  .traffic-chart {
-    width: 90vw;
-  }
-  .daily-traffic-chart,
-  .mobile-user-chart {
-    width: 45vh;
-  }
 
  }
