@@ -62,7 +62,7 @@ let newDailyChart = new Chart(dailyChart, {
       display: false
     }
   }
-})
+});
 
 // Mobile Chart
 const mobileChart = document.getElementById('mobile-chart');
@@ -91,4 +91,4 @@ let newMobileChart = new Chart(mobileChart, {
       }
     }
   }
-})
+});
