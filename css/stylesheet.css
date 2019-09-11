@@ -70,6 +70,15 @@ hr {
   padding: 2px 0;
 }
 
+/* .alert p {
+  display: inline-block;
+} */
+.alert-banner {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 /* ----------------- Navbar ----------------- */
 .navbar {
