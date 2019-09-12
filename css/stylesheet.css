@@ -174,7 +174,7 @@ input {
 .message,
 .settings {
   width: 100%;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 /* ----------------- Main  traffic----------------- */
@@ -455,6 +455,18 @@ button {
   .switch-light {
     width: 100%;
   }
+
+  .traffic,
+  .daily,
+  .mobile,
+  .social, 
+  .members-section,
+  .activity-section,
+  .message,
+  .settings {
+    width: 100%;
+    padding: 2rem;
+}
 
 }
 
