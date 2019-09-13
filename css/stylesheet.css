@@ -8,9 +8,8 @@
 /* ----------------- Header ----------------- */
 header {
   background: #7e79ba;
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
+  display: grid;
+  grid-template-columns: 60% 40%;
   width: 100%;
   color: white;
 }
@@ -24,16 +23,13 @@ span{
 }
 
 .header-nav {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  width: 30%;
-  font-size: 1.5vw;
+  display: grid;
+  grid-template-columns: .5fr .5fr 0.5fr 2fr 6.5fr;
 }
 
 hr {
   width: 1px;
-  height: 40px;
+  height: 60%;
   border: none;
   background-color: #653dc4;
   margin: auto 0.5rem;
@@ -50,6 +46,7 @@ hr {
 
 .bell-container {
   position: relative;
+  margin: auto;
 }
 
 .bell-marker {
@@ -68,41 +65,38 @@ hr {
 }
 
 #profile-image {
-  width: auto;
-  height: 50%;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
 }
 
 .alert {
-  text-align: center;
   background: #7e79ba;
-  width: 60%;
-  margin: 0.5rem auto;
+  width: 93%;
+  margin: 0.5rem 2rem;
   color: #fff;
   border-radius: 10px;
-  padding: 2px 0;
 }
 
 .alert-banner {
   padding: 0 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+.alert-banner-close {
+  text-align: end;
 }
 
 /* ----------------- Navbar ----------------- */
 .navbar {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   background: #605380;
   height: 80px;
 }
 
 .navbar a {
   text-align: center;
-  width: 100%;
+  width: 60%;
   margin: auto 1rem;
   padding: 18px;
 }
@@ -126,7 +120,7 @@ hr {
 }
 
 h2 {
-  margin: 1rem 1rem 1rem 0;
+  margin: 1rem;
 }
 
 h3 {
@@ -180,13 +174,16 @@ input {
 /* ----------------- Main  traffic----------------- */
 
 .traffic-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 1rem auto;
+  display: grid;
+  grid-auto-columns: 1fr 3fr;
+}
+
+h3 {
+  grid-column: 1 / 2;
 }
 
 .traffic-list {
+  grid-column: 2 / span 3;
   display: flex;
   list-style: none;
   justify-content: flex-end;
@@ -206,15 +203,15 @@ input {
 }
 
 .traffic-chart {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 /* ----------------- Daily traffic and mobile user----------------- */
 .daily-traffic-chart,
 .mobile-user-chart {
-  margin: 1rem auto;
+  margin: auto;
   height: 50%;
-  width: 45vw;
+  width: 60%;
 }
 
 /* ----------------- Social states----------------- */
@@ -223,7 +220,7 @@ input {
   grid-template-columns: auto;
   grid-row-gap: 1.5rem;
   width: 55%;
-  margin: 3rem auto;
+  margin: 0.5rem auto;
 
 }
 
@@ -275,7 +272,6 @@ input {
 .activity-section {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 1.5rem;
 }
 
 .members-container,
@@ -293,6 +289,11 @@ input {
   grid-column-gap: 0.5rem;
   padding-bottom: 5px;
   border-bottom: solid 1px lightgray;
+}
+
+.members-container div:last-child,
+.activity-container div:last-child {
+  border-bottom: none;
 }
 
 .user-image {
@@ -332,7 +333,6 @@ input {
 .settings {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 1.5rem;
   padding: 2rem;
 }
 
@@ -386,26 +386,29 @@ button {
 
 /* ----------------- Media query ----------------- */
 @media (min-width:768px) {
+  header {
+    grid-template-columns: 75vw 25vw;
+  }
+  
   .main-header {
     width: 100%;
     grid-template-columns: 1fr 5fr;
   }
 
   .header-nav {
-    width: 25%;
+    width: 100%;
   }
 
   .navbar {
-    flex-direction: column;
-    text-align: center;
-    justify-content: flex-start;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 90px) auto;
     background: #605380;
-    width: 100%;
     height: 100%;
   }
   .navbar a {
     height: 80px;
     margin: 1.5rem auto;
+    width: 100%;
   }
 
   .navbar a:hover {
@@ -425,7 +428,7 @@ button {
   .mobile-user-chart {
   margin: 1rem auto;
   height: 80%;
-  width: 80%;
+  width: 95%;
 }
 
   .social-container {
@@ -465,7 +468,7 @@ button {
   .message,
   .settings {
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 }
